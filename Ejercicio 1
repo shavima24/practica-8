@@ -1,1 +1,29 @@
+// Shari Soto
+// Ejercicio 1 While 
 
+#include <stdio.h>
+
+int main()
+{
+    int n, i = 1, ultimo = 0, ultimoo = 0;
+    
+    printf("introduce un valor para n: ");
+    scanf("%d", &n);
+
+while (i <= n)
+{
+    if (i % 2 == 0)
+    {
+        ultimo = i;
+    }
+    else
+    {   
+     ultimoo = i;
+    }   
+     i++;
+    }
+    printf ("ultimo numero par: %d/n", ultimo);
+    printf ("ultimo numero impar: %d/n", ultimoo);
+
+    return 0;
+}
