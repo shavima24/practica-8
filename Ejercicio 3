@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <math.h>
+
+float suma(float a, float b) 
+    { 
+      return a + b;
+    }
+float resta(float a, float b)
+    { 
+        return a - b; 
+    }
+float multiplicacion(float a, float b)
+    { 
+        return a * b;
+    }
+float division(float a, float b) 
+    { 
+        return b != 0 ? a / b : 0; 
+    } 
+float potencia(float a, float b)
+    { 
+        return pow(a, b); 
+    }
+float raiz(float a) 
+    { 
+        return sqrt(a); 
+    } 
+
+int main() 
+{
+    float res, a, b;
+    int op;
+
+    printf("Ingrese operacion (1=Suma, 2=Resta, 3=Multiplicacion, 4=Division, 5=Potencia, 6=Raiz): ");
+    scanf("%d", &op);
+
+    if (op >= 1 && op <= 5) 
+    {
+        printf("Ingrese dos numeros: ");
+        scanf("%f %f", &a, &b);
+    } 
+    else if (op == 6) 
+    {
+        printf("Ingrese numero: ");
+        scanf("%f", &a);
+    } 
+    else 
+    {
+        printf("Opcion invalida.\n");
+        return 1;
+    }
+
+    switch (op) 
+    {
+        case 1: res = suma(a, b); break;
+        case 2: res = resta(a, b); break;
+        case 3: res = multiplicacion(a, b); break;
+        case 4: res = division(a, b); break;
+        case 5: res = potencia(a, b); break;
+        case 6: res = raiz(a); break;
+    }
+
+    printf("Resultado: %.2f\n", res);
+    return 0;
+}
